@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import axios from 'axios';
+import { useEffect, useState } from 'react/cjs/react.development';
+import ContactList from './components/ContactList';
+import NavBar from './components/NavBar';
+import GlobalStyle from './components/styled-components/GlobalStyle';
+import Wrapper from './components/styled-components/Wrapper';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [contactList, setContactList] = useState([]);
+	useEffect(() => {
+		axios.get('http://localhost:3004/contacts').then(res => setContactList([...JSON.parse(JSON.stringify(res.data))]));
+		console.log('list rendered');
+	}, []);
+	return (
+		<>
+			<GlobalStyle />
+			<Wrapper>
+				<NavBar />
+				<ContactList contactList={contactList} />
+			</Wrapper>
+		</>
+	);
 }
 
 export default App;
