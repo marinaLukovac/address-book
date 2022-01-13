@@ -7,7 +7,7 @@ import Wrapper from './components/styled-components/Wrapper';
 function App() {
 	const [contactList, setContactList] = useState([]);
 	useEffect(() => {
-		axios.get('http://localhost:3004/contacts').then(res => setContactList([...JSON.parse(JSON.stringify(res.data))]));
+		axios.get('https://git.heroku.com/address-books-server.git').then(res => setContactList([...JSON.parse(JSON.stringify(res.data))]));
 		console.log('list rendered');
 	}, []);
 	return (
