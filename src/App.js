@@ -1,14 +1,15 @@
-import axios from 'axios';
+// import axios from 'axios';
 import { useEffect, useState } from 'react';
 import ContactList from './components/ContactList';
 import NavBar from './components/NavBar';
 import GlobalStyle from './components/styled-components/GlobalStyle';
 import Wrapper from './components/styled-components/Wrapper';
-import { deepCopyArrayOfObj } from './service';
+import { deepCopyArrayOfObj, getContactList } from './service';
+
 function App() {
 	const [contactList, setContactList] = useState([]);
 	useEffect(() => {
-		axios.get('https://address-books-server.herokuapp.com/contacts').then(res => setContactList(deepCopyArrayOfObj(res.data)));
+		getContactList().then(res => setContactList(deepCopyArrayOfObj(res.data)));
 		console.log('list rendered');
 	}, []);
 	const deleteContact = id => {

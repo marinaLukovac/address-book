@@ -6,11 +6,11 @@ const Button = styled.button`
 	height: 35%;
 	font-size: 2.5vh;
 	font-weight: 200;
-	border: 0.2vh solid #808080;
+	border: 0.2vh solid #a54758;
 	border-radius: 0.4vh;
-	color: #808080;
+	color: #a54758;
 	&:hover {
-		background-color: #cacaca;
+		background-color: #a54758;
 		color: #fff;
 		border-color: #fff;
 		font-style: bold;
