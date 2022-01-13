@@ -75,3 +75,6 @@ During development phase:
 -added to scripts: "server": "json-server --watch db.json --port 3004"
 --
 -npm run server is the command for the json
+
+path to heroku server:
+https://address-books-server.herokuapp.com/contacts

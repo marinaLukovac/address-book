@@ -1,5 +1,9 @@
 import axios from 'axios';
 
-const getContactList = async () => await axios.get('http://localhost:3004/contacts');
+const getContactList = async () => await axios.get('https://address-books-server.herokuapp.com/contacts');
 
-export { getContactList };
+const deepCopyArrayOfObj = array => {
+	return [...JSON.parse(JSON.stringify(array))];
+};
+
+export { getContactList, deepCopyArrayOfObj };

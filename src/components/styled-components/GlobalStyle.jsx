@@ -2,11 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
-  body {
+  * {
     margin: 0;
     padding: 0;
-    background: teal;
-    font-family: Verdana;
+    background: #f5f5f5;
+    box-size: border-box;
+    font-family: 'Poppins', sans-serif;
     ::-webkit-scrollbar {
     display: none;
 }
