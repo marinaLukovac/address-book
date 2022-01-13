@@ -8,7 +8,7 @@ import { deepCopyArrayOfObj } from './service';
 function App() {
 	const [contactList, setContactList] = useState([]);
 	useEffect(() => {
-		axios.get('http://localhost:3004/contacts').then(res => setContactList(deepCopyArrayOfObj(res.data)));
+		axios.get('https://address-books-server.herokuapp.com/contacts').then(res => setContactList(deepCopyArrayOfObj(res.data)));
 		console.log('list rendered');
 	}, []);
 	const deleteContact = id => {
