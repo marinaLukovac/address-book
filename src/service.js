@@ -3,7 +3,7 @@ import axios from 'axios';
 //local server: http://localhost:3004/contacts
 //heroku server: https://address-books-server.herokuapp.com/contacts
 
-const getContactList = async () => await axios.get('http://localhost:3004/contacts');
+const getContactList = async () => await axios.get('https://address-books-server.herokuapp.com/contacts');
 
 const deepCopyArrayOfObj = array => {
 	const newArray = [...JSON.parse(JSON.stringify(array))];

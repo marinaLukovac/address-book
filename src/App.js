@@ -1,4 +1,3 @@
-// import axios from 'axios';
 import { useEffect, useState } from 'react';
 import ContactList from './components/ContactList';
 import NavBar from './components/NavBar';
@@ -9,7 +8,6 @@ import { deepCopyArrayOfObj, getContactList } from './service';
 function App() {
 	const [contactList, setContactList] = useState([]);
 	const [filtered, setFiltered] = useState([]);
-	const [listView, setListView] = useState(true);
 
 	useEffect(() => {
 		getContactList().then(res => {
@@ -18,12 +16,10 @@ function App() {
 		});
 		console.log('list rendered');
 	}, []);
-	// useEffect(() => {
-	// 	console.log('filtered rendered');
-	// }, [contactList]);
 	const deleteContact = id => {
 		setContactList(prev => deepCopyArrayOfObj(prev).map(contact => contact.id !== id));
-		//http delete request
+		setFiltered(prev => deepCopyArrayOfObj(prev).map(contact => contact.id !== id));
+		//insert http delete request
 	};
 	return (
 		<>
