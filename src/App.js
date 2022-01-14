@@ -9,6 +9,7 @@ import { deepCopyArrayOfObj, getContactList } from './service';
 function App() {
 	const [contactList, setContactList] = useState([]);
 	const [filtered, setFiltered] = useState([]);
+	const [listView, setListView] = useState(true);
 
 	useEffect(() => {
 		getContactList().then(res => {
@@ -28,7 +29,7 @@ function App() {
 		<>
 			<GlobalStyle />
 			<Wrapper>
-				<NavBar contactList={contactList} setFiltered={setFiltered} />
+				<NavBar contactList={contactList} filtered={filtered} setFiltered={setFiltered} />
 				<ContactList filtered={filtered} deleteContact={deleteContact} />
 			</Wrapper>
 		</>
