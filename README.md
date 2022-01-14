@@ -41,17 +41,25 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### ADDED DEVELOPMENT DEPENDENCIES
 
---npx create-react-app address-book
---npm install axios 
---npm install json-server //development phase
---npm install styled-components
---npm install gh_pages -save--dev
+** npx create-react-app address-book
+--
+** npm install axios 
+--
+** npm install json-server //development phase
+--
+** npm install styled-components
+--
+** npm install gh_pages -save--dev
+--
 
 -Created: db.json file with mockup info (resource: https://www.mockaroo.com/)
--added to package.json scripts: 
-      "server": "json-server --watch db.json --port 3004",
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d build"
+--
+added to package.json scripts: 
+--
+  **"server": "json-server --watch db.json --port 3004",
+     --
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
 -added to package.json: "homepage": "http://marinaLukovac.github.io/address-book"
 -npm run server is the command for the json
 
