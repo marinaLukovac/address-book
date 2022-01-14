@@ -8,10 +8,18 @@ import { deepCopyArrayOfObj, getContactList } from './service';
 
 function App() {
 	const [contactList, setContactList] = useState([]);
+	const [filtered, setFiltered] = useState([]);
+
 	useEffect(() => {
-		getContactList().then(res => setContactList(deepCopyArrayOfObj(res.data)));
+		getContactList().then(res => {
+			setContactList(deepCopyArrayOfObj(res.data));
+			setFiltered(deepCopyArrayOfObj(res.data));
+		});
 		console.log('list rendered');
 	}, []);
+	// useEffect(() => {
+	// 	console.log('filtered rendered');
+	// }, [contactList]);
 	const deleteContact = id => {
 		setContactList(prev => deepCopyArrayOfObj(prev).map(contact => contact.id !== id));
 		//http delete request
@@ -20,8 +28,8 @@ function App() {
 		<>
 			<GlobalStyle />
 			<Wrapper>
-				<NavBar />
-				<ContactList contactList={contactList} deleteContact={deleteContact} />
+				<NavBar contactList={contactList} setFiltered={setFiltered} />
+				<ContactList filtered={filtered} deleteContact={deleteContact} />
 			</Wrapper>
 		</>
 	);

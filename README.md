@@ -78,3 +78,6 @@ During development phase:
 
 path to heroku server:
 https://address-books-server.herokuapp.com/contacts
+
+warning to handle:
+Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.

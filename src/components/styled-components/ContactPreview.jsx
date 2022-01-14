@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 const ContactPreview = styled.li`
-	padding: 1vh 2vh;
-	margin: 1vh 0;
+	padding: 1vh;
+	margin-top: 1vh;
 	display: grid;
 	grid-template-columns: 20% 35% 30% 15%;
 	align-items: center;
@@ -16,6 +16,7 @@ const ContactPreview = styled.li`
 	}
 	& .delete-edit {
 		height: 15vh;
+		width: 8vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
