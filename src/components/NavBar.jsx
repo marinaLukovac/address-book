@@ -11,15 +11,15 @@ const NavBar = ({ contactList, setFiltered, filtered }) => {
 	};
 	return (
 		<NavigationStyled>
-			<Button>NEW CONTACT</Button>
-
+			<Button>&#8656;</Button>
 			<input type="text" placeholder="Search Contact By Name" onChange={searchHandler} value={searchString} />
+			<Button>&#43;</Button>
 			<Button
 				onClick={() => {
 					exportCsvFileArrayOfObjects(filtered);
 				}}
 			>
-				EXPORT ALL
+				&#8659;
 			</Button>
 		</NavigationStyled>
 	);

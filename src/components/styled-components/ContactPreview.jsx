@@ -3,7 +3,7 @@ const ContactPreview = styled.li`
 	padding: 1vh;
 	margin-top: 1vh;
 	display: grid;
-	grid-template-columns: 20% 35% 30% 15%;
+	grid-template-columns: 15% 37% 33% 15%;
 	align-items: center;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.08) 0px 1px 2px 0px;
 	& .picture-frame {

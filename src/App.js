@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import AddContact from './components/AddContact';
 import ContactList from './components/ContactList';
+import EditContact from './components/EditContact';
 import NavBar from './components/NavBar';
 import GlobalStyle from './components/styled-components/GlobalStyle';
 import Wrapper from './components/styled-components/Wrapper';
@@ -22,13 +25,17 @@ function App() {
 		//insert http delete request
 	};
 	return (
-		<>
+		<BrowserRouter>
 			<GlobalStyle />
 			<Wrapper>
 				<NavBar contactList={contactList} filtered={filtered} setFiltered={setFiltered} />
-				<ContactList filtered={filtered} deleteContact={deleteContact} />
+				<Routes>
+					<Route path="/new" element={<AddContact />}></Route>
+					<Route path="/contactId" element={<EditContact />}></Route>
+					<Route exact path="/address-book" element={<ContactList filtered={filtered} deleteContact={deleteContact} />}></Route>
+				</Routes>
 			</Wrapper>
-		</>
+		</BrowserRouter>
 	);
 }
 

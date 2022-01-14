@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const NavigationStyled = styled.nav`
 	padding: 1vh;
 	display: grid;
-	grid-template-columns: 20% 60% 20%;
+	grid-template-columns: 15% 37% 33% 15%;
 	align-items: stretch;
 	& i {
 		margin: auto;
