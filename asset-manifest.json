@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/address-book/static/js/main.a054b3de.js",
+    "main.js": "/address-book/static/js/main.8322440f.js",
     "index.html": "/address-book/index.html",
-    "main.a054b3de.js.map": "/address-book/static/js/main.a054b3de.js.map"
+    "main.8322440f.js.map": "/address-book/static/js/main.8322440f.js.map"
   },
   "entrypoints": [
-    "static/js/main.a054b3de.js"
+    "static/js/main.8322440f.js"
   ]
 }
