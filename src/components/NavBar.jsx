@@ -11,8 +11,8 @@ const NavBar = ({ contactList, setFiltered, filtered }) => {
 	};
 	return (
 		<NavigationStyled>
-			<Button>&#8656;</Button>
-			<input type="text" placeholder="Search Contact By Name" onChange={searchHandler} value={searchString} />
+			<Button>&#8962;</Button>
+			<input type="text" placeholder="Search By Name" onChange={searchHandler} value={searchString} />
 			<Button>&#43;</Button>
 			<Button
 				onClick={() => {

@@ -1,0 +1,13 @@
+**Solve DELETE function
+**Add EDIT and ADD NEW view
+** MYSQL DB 
+    heroku + ClearDB + NodeJS
+        Create
+        Read
+        Update
+        Delete
+
+**Refactor
+**Correct UI: perfect positioning...
+
+**Work on Import and Export File Validation

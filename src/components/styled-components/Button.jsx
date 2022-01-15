@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 const Button = styled.button`
 	padding: 0.5vh 2vh;
-	height: 35%;
+	height: 5vh;
 	font-size: 2.5vh;
 	font-weight: 200;
-	border: 0.2vh solid #a54758;
+	border: 0.2vh solid #808080;
 	border-radius: 0.4vh;
-	color: #a54758;
+	color: #808080;
+	background: #f5f5f5;
 	&:hover {
 		background-color: #a54758;
 		color: #fff;

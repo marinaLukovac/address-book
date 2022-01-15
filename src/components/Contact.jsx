@@ -1,5 +1,6 @@
+import { exportCsvFileArrayOfObjects } from '../service';
 import DeleteButton from './DeleteButton';
-import EditButton from './EditButton';
+import Button from './styled-components/Button';
 import ContactPreview from './styled-components/ContactPreview';
 
 function Contact({ contactInfo, deleteContact }) {
@@ -11,11 +12,23 @@ function Contact({ contactInfo, deleteContact }) {
 					backgroundImage: `url("${contactInfo.picture}")`,
 				}}
 			></div>
-			<h3>{contactInfo.fullName}</h3>
-			<p>{contactInfo.address}</p>
+			<div className="contact-info">
+				<h3>{contactInfo.fullName}</h3>
+				<div className="edit-box">
+					<Button>EDIT</Button>
+					<p>{contactInfo.address}</p>
+				</div>
+			</div>
 			<div className="delete-edit">
 				<DeleteButton deleteContact={deleteContact} id={contactInfo.id} />
-				<EditButton />
+
+				<Button
+					onClick={() => {
+						exportCsvFileArrayOfObjects([contactInfo]);
+					}}
+				>
+					&#8659;
+				</Button>
 			</div>
 		</ContactPreview>
 	);
