@@ -21,7 +21,7 @@ function ContactList({ filtered, contactList, deleteContact }) {
 	return (
 		<ContactsPreview>
 			<input type="file" accept="image/*" required name="picture" id="picture" onChange={fileSelectedHandler} />
-			<button onClick={uploadSelectedImage}></button>
+			<button onClick={uploadSelectedImage}>UPLOAD IMAGE</button>
 			{filtered.map(contactInfo => (
 				<Contact key={contactInfo.id} contactInfo={contactInfo} deleteContact={deleteContact} contactList={contactList} />
 			))}
