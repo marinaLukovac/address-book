@@ -600,7 +600,5 @@
 			"fullName": "Stillmann Flemyng",
 			"address": "7023 Schurz Point"
 		}
-	],
-	"comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-	"profile": { "picture": "https://images.pexels.com/photos/7020543/pexels-photo-7020543.jpeg?cs=srgb&dl=pexels-rodnae-productions-7020543.jpg&fm=jpg", "fullName": "typicode" }
+	]
 }

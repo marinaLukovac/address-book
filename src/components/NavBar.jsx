@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { deepCopyArrayOfObj, exportCsvFileArrayOfObjects } from '../service';
 import Button from './styled-components/Button';
 import NavigationStyled from './styled-components/NavigationStyled';
@@ -11,9 +12,13 @@ const NavBar = ({ contactList, setFiltered, filtered }) => {
 	};
 	return (
 		<NavigationStyled>
-			<Button>&#8962;</Button>
+			<Link to="/address-book">
+				<Button>&#8962;</Button>
+			</Link>
 			<input type="text" placeholder="Search By Name" onChange={searchHandler} value={searchString} />
-			<Button>&#43;</Button>
+			<Link to="/contacts/new">
+				<Button>&#43;</Button>
+			</Link>
 			<Button
 				onClick={() => {
 					exportCsvFileArrayOfObjects(filtered);
